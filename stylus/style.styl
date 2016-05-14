@@ -1,2402 +1,695 @@
-@import 'url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic,cyrillic-ext)';
 @import 'bxslider.css';
 @import 'animate.css';
 @import "reset.css";
 @import "variables";
-@import 'flex';
 @import 'nib';
 @import 'sprite';
 @import 'mixins';
 
 body 
-  font-family pt-sans
-.b-wrapper 
-  width 100%
-  max-width 1920px 
+  font-family: 'PT Sans Narrow', sans-serif;
+  background: url(../images/bg.jpg) no-repeat top center fixed
+.b-wrapper
+  width 1274px 
   margin 0 auto
-  min-width: 1000px;
-.container-wrapper
-  width 1000px
-  margin 0 auto
-// Header
-.header__top 
-  background white 
-  padding 10px 0
-.header__bottom
-  background grey
-.logo 
-  sprite($sprite-logo)
-  display inline-block
-.support__icon 
-  sprite($sprite-icon1)
-  margin-right 10px
-.support-wrapper
-  border 1px solid g-border
-  border-radius (4px)
-  padding 8px 13px
-.contacts__email
-  color green
-  decor()
-.date__time 
-  color link
-.date__gmt
-  color s-grey
-.top__logo
-  width: 135px;
-  text-align: center;
-.top__contacts
-.top__date
-  line-height 24px
-.top__date
-  width 190px
-  margin-left 18px
-.button_reset-radius-left
-  border-radius 4px 0 0 4px
-.button_reset-radius-right 
-  border-radius 0 4px 4px 0
-// Menu
-.menu__link 
-  padding 14px 0px
-  display block
-  text-align center
-  &:hover 
-    background green 
-    color white
-    trs()
-.menu__link_active 
-  background green
-  color white
-  a 
-    color white
-.menu__item 
-  flex-grow 1
-  flex-basis 0
-  max-width 100%
-// SLider
-.slider 
-  overfow hidden
-.slide img 
-  width 100%
-  min-width 1000px
-.section__slide
-  position: relative
-.slide__bottom
-  position: absolute
-  bottom 0px
-  width 100%
-  z-index 100
-  background rgba(0,0,0, 0.5)
-  padding 30px 0
-.text_white 
-  color white
-.slide__logo
-  sprite($sprite-logo2)
-.col__71
-  width 71%
-  .button 
-    margin-top 25px
-// Section 
-.section 
-  padding 30px 0 40px 0
-.about__h2
-  font-size 48px
-  margin-bottom 10px
-.section__about
-  background: url(../images/bg1.jpg)
-.section__about2
-  background url(../images/bg2.png) no-repeat center top, url(../images/bg1.jpg)
+  padding-top 30px
   padding-bottom 30px
-.col__590
-  width 590px
-  p 
-    margin-bottom 20px
-  .button 
-    margin-top 10px
-.about__text-wrap
-  margin-bottom 17px
-.frame 
-  margin-bottom 20px
-  iframe 
-    width 100%
-    height 330px
-.text_grey 
-  color s-grey
-.section__tech_dark
-  background: url(../images/bg2.png) #f7f7f7 no-repeat center top
-.seciton__tech
-.section__comment
-  background: url(../images/bg2.png) no-repeat center top
-.tech__h2 
-  font-size 36px
-  margin-bottom 20px
-.col__380
-  width 380px
-.col__620 
-  width 620px
-.col__right_bg
-  background: linear-gradient(to right, rgba(155,211,1,1) 0%, rgba(0,155,222,1) 100%);
-  padding 2px 
-  margin-left 30px
-  img 
-    display block
-.tech__tab
-  background:  grey
-  padding 20px
-  cursor pointer
-  &:hover 
-    background green
-    trs()
-    color white
-    span
-      trs()
-      color white
-.active__tab 
-  background: green
-  color white
-  span 
-    color white
-.tech__text
-  font-size 17px
-  margin-left 20px
-  span 
-    display block
-.tech__icon1
-  sprite($sprite-icon2)
-.tech__icon2
-  sprite($sprite-icon3)
-.tech__content
-  padding 25px 30px 30px 30px
-  background: rgba(248, 248, 248, 0.90)
-  z-index 2
-  position relative
-  margin-bottom 35px
-  &:first-child
-    margin-bottom 0px
-.tech__h3 
-  font-size 24px
-  margin-bottom 13px
-.tech__list 
-  font-size 14px
-  color s-grey
-.tech__img 
-  margin 25px 0 40px 0
-.tech__ol
-  list-style-position inside
-.tech__item 
-  margin-bottom 15px
-  list-style number inside
-  h4 
-    display inline-block
-.active__content
-  display block
-.relative 
+header 
+  background: rgba(255, 255, 255, 0.89);
+  border-radius(10px 10px 0 0)
+  padding 30px 20px 0 20px
   position: relative
-  overflow hidden
-.tech__bg1
-  background: url(../images/tech3.png) no-repeat bottom left
-  position: absolute
-  left 0px
-  width 100%
-  height 742px
-  bottom 0px
-.tech__bg2
+  &:after 
+    content ''
+    width 100%
+    height 7px 
+    box-shadow 0 0 16px rgba(0, 0, 0, 0.48);
+    display block
+    position absolute
+    left 0px
+    background: white
+    bottom 0px
+.section__delivery
+  background: url(../images/bg2.png) no-repeat center
+  margin-top 30px
+  padding 20px 40px 50px 40px
+  border-radius(10px)
+  a 
+    color white 
+    font-size 24px
+.header__logo
+  sprite($sprite-logo)
+.header__title
+  color orange
+  font-size 24px
+  display block
+  line-height 25px
+.header__col
+  padding 0 20px
+.header__phone 
+  font-size 21px
+  color orange
+  display block
+.header__col_28
+  width 28%
+  padding-right 0px
+.menu__item.menu__item_active
+  background: url(../images/button-hover.png) no-repeat center
+.jsTabs:last-child.active
+  background: url(../images/last-button.png) no-repeat center
+.jsTabs:first-child.active
+  background: url(../images/first-button.png) no-repeat center
+.jsTabs
+  height 33px
+  line-height 33px
+  text-align: center
+  &:last-child
+    width 117px
+    background: url(../images/last-button.png) no-repeat center
+    &:hover
+      background: url(../images/last-hover.png) no-repeat center
+  &:first-child
+    width 123px
+    background: url(../images/first-button.png) no-repeat center
+    &:hover
+      background: url(../images/first-hover.png) no-repeat center
+.menu__item
+  display: inline-block
+  background: url(../images/button.png) no-repeat center
+  &:hover
+    background: url(../images/button-hover.png) no-repeat center
+  &:last-child 
+    background: url(../images/last-button.png) no-repeat center
+    &:hover
+      background: url(../images/last-hover.png) no-repeat center
+  &:last-child.menu__item_active
+    background: url(../images/last-hover.png) no-repeat center
+  &:first-child 
+    background: url(../images/first-button.png) no-repeat center
+    &:hover
+      background: url(../images/first-hover.png) no-repeat center
+    a 
+      width: 122px;
+  &:first-child.menu__item_active
+    background: url(../images/first-hover.png) no-repeat center
+.menu__link
+  font-size 13px 
+  color white
+  width 117px
+  text-align: center
+  height 33px 
+  text-transform: uppercase
+  line-height 33px
+  position: relative;
+  left: -4px;
+menu 
+  text-align: center
+  padding 0px
+  position relative 
+  top -7px
+  margin 0px
+section 
+  background: #fcfafc
+.section__title
+  background: linear-gradient(to bottom, #ff8c1c 0%,#ffae04 99%);
+  border-bottom-right-radius: 15px 60px;
+  border-bottom-left-radius: 15px 60px;
+  margin 0 5px
+.title__h2
+  font-size 40px 
+  color white
+  padding 13px 10px 7px 10px
+  margin-left 50px
+  text-transform: uppercase
+.slider-wrapper 
+  padding 10px
+  img 
+    width 100%
+.video__link
+  border 5px solid white
+  border-radius 8px
+  oveflow hidden
+  trs()
+  shadow()
+  &:hover 
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    trs()
+.section__video
+  padding 35px 35px 120px 35px
+  border-radius 0 0 10px 10px
+.video__link
+  margin 0 24px
+  text-align: center
+  position: relative
+.video__element 
+  font-size 30px 
+  color white
   width 100%
   position absolute
-  left 0px 
-  bottom 0px
-  height 671px
-  background: url(../images/tech4.png) no-repeat bottom center
-  background-size contain
-.section__stat
-  background: url(../images/bg3.jpg) center
-.stat__h2 
-  font-size 36px
-  margin-bottom 10px
-.col__274
-  width 274px
-  color white
-.stat-wrapper
-  padding 30px 0px 30px 0
-  background: url(../images/bg4.jpg) center
-.graphic-wrapper
-  margin-top 20px
-.stat__title
-  font-size 24px
-  color white
-.stat__date 
-  font-size 15px
-  color white
-  display block
-.stat__head 
-  text-align: center
-.stat__content
-  padding 30px 0px 0px 26px 
+  font-weight normal
+  margin-top 5px
+.toggle-menu
+  display none
+.button_next 
+  &:before 
+    content ''
+    sprite($sprite-icon-3)
+    display inline-block
+    vertical-align: middle
+    margin-right 5px
+.button_cal 
+  &:before 
+    content ''
+    sprite($sprite-icon-2)
+    display inline-block
+    vertical-align: middle
+    margin-right 5px
+.button_back
+  &:before 
+    content ''
+    sprite($sprite-icon-1)
+    display inline-block
+    vertical-align: middle
+    margin-right 5px
+.section__controls
+  background: linear-gradient(to top, #e1e1e2 0%,#f4f5f6 99%);
+  margin 0 18px 20px 18px
+  border-radius (0 0 30px 30px)
+  padding 10px 46px
+.content-wrapper
+  padding 0 50px
+.section__content
+  border-radius 0 0 10px 10px
+  padding-bottom 100px
+.section_border
+  position relative
+  padding-bottom 40px
+  &:after
+    bottom 0px
+    position absolute
+    content ''
+    height 10px 
+    width 100%
+    border-radius (5px)
+    background: linear-gradient(to right, #fbc212 0%,#c891b7 99%);
+    display block
+.section_borders
+  position relative
+  &:after
+    bottom 0px
+    position absolute
+    content ''
+    height 10px 
+    width 100%
+    border-radius (5px)
+    background: linear-gradient(to right, #fbc212 0%,#c891b7 99%);
+    display block
+  &:before 
+    position absolute
+    content ''
+    height 10px 
+    width 100%
+    border-radius (5px)
+    background: linear-gradient(to right, #fbc212 0%,#c891b7 99%);
+    display block
+    top 0px
+.section__schedule
+  height 1000px
+  width 100%
+.content
+  padding 20px 0
 .col__50 
   width 50%
-  position relative
-.stat__total
-  height 40px
-  margin-bottom 17px 
-  color white
-  width 90%
-.stat__price
-  height 40px
-  margin-bottom 17px 
-  color white
-  background: green
-  text-align: center
-  padding 5px 0
-.graphic__button
-  border 1px solid #cfcfcf
-  border-radius (4px)
-  padding 10px
-  font-size 14px
-  margin-right 10px
-  &:before 
-    content ''
-    width 18px
-    height @width
-    border-radius(50%)
-    background: #cfcfcf
-    display inline-block
-    vertical-align: middle
-    margin-right 10px
-    position relative 
-    top -1px
-  &:hover 
-    border 1px solid green
-    &:before 
-      background: green
-.graphic__button_active
-  border 1px solid green
-  &:before 
-    background: green
-.stat__buttons 
-  margin 30px 0 13px 53px
-  display none
-.stat__graphic
-  // margin-top 20px
-  position relative
-  top -20px
-  padding-right 15px
-.comment__h2
-  font-size 36px 
-  text-align: center
-  margin-bottom 30px
-.comment
-  padding 30px 20px
-  margin 0 0 20px 20px
-  position relative
-.comment_green
-  background: green
-  &:after 
-    content ''
-    border-top 40px solid green
-    border-right 0px solid transparent
-    border-left 45px solid transparent
-    position absolute
-    bottom -40px 
-    right 0px
-    z-index 2
-.comment_blue
-  background: blue
-  &:after 
-    content ''
-    border-top 40px solid blue
-    border-right 45px solid transparent
-    border-left 0px solid transparent
-    position absolute
-    bottom -40px 
-    left 0px
-    z-index 1
-  &:before
-    content ''
-    border-top 40px solid white
-    border-right 0px solid transparent
-    border-left 45px solid transparent
-    position absolute
-    top 0px 
-    right 0px
-    z-index 1
-.frame_comment
-  margin-right 20px
-  margin-bottom 10px
-  iframe
-    height 270px
-.comment__author
-  font-size 17px
-  margin-bottom 5px
-.comment__user
-  font-size 17px
+.phone__icon
+  sprite($sprite-icon-4)
+.env__icon
+  sprite($sprite-icon-6)
+.home__icon
+  sprite($sprite-icon-5)
+.contacts
+  padding 70px
+.events-wrapper 
+  padding 30px 50px
+.events
+  padding 0 20px
+.contact__title
+  color purple
+  font-size 40px
+  line-height 40px
+.contact__phones 
+  color grey 
+  font-size 26px
+.va-top 
+  vertical-align top
+.contact__phones_top 
+  margin 8px 0
+.contact__link
+  font-size 23px 
+  color grey 
+  font-weight bold
   display block
-// Footer
-footer 
-  padding 60px 0 50px 0
-  background: url(../images/bg6.jpg) no-repeat center
-  background-size cover
-.copy__span 
-  display block
-.auth 
-  height 44px
-  line-height 44px
-  padding 0 17px
-.lang 
-  padding 0 15px
-  color white
-  height 44px
-  line-height 44px
-  text-align center
-  width 50px
-.lang_en
-  display none
-  color white
-  text-transform uppercase
-.lang_ru 
-  color white
-  text-transform uppercase
-.lang.active
-  .lang_en
-    display inline-block
-  .lang_ru
-    display none
-.footer__logo
-  sprite($sprite-logo3)
-.fb
-  sprite($sprite-icon4)
-.tw
-  sprite($sprite-icon5)
-  margin-left 10px
-.copy__ed
-  display block
-.footer__link
-  color white
-  font-size 13px
-  margin-right 20px
-  decor()
-.privacy__link 
-  color white
-  font-size 13px
-  margin-right 8px
-  decor()
-  &:first-child:after 
-    content ''
-    width 6px 
-    height @width 
-    background: green
-    display inline-block
-    border-radius (50%)
-    margin-left 6px
-.footer__copy span 
-  color lime
-  font-size 13px
-.mailto 
-  color lime 
-  font-size 13px
-  margin-left 20px
-.menu__title 
-  display block
-  margin-bottom 10px
-  color lime
-.briz
-  color briz
-.copy__ed
-  font-size 13px
-.footer__privacy
-  margin-top 50px
-  line-height 28px
-.footer__copy
-  line-height 28px 
-  margin-top 20px
-.socials
-  margin-top 20px
-  text-align center
-  width 100%
-.js__none
-  display none
-.section__invest
-  background: url(../images/bg5.jpg)
-  padding-bottom 20px
-.invest__h2
-  color white
-  font-size 36px
-  margin-bottom 25px
-.bg_green
-  background: green
-  padding 20px 20px 20px 50px
-.invest__ul
-  font-size 14px
-  line-height 30px
-  color #4e690c
-  span 
-    color white
-    margin-left 5px
-.col__h3
-  font-size 24px
-  color white
-  margin 15px 0
-.stat_green
-  background: url(../images/bg7.jpg) center
-  padding-bottom 0px
-.stat__gr
-  margin 40px 0 10px 0
-.stat__profit
-  padding 20px 20px
-  text-align center
-  .button_blue
-    display block
-.input_black
-  border 1px solid #4e690c
-  display block
-  font-size 19px
-  color white
-  margin-top 18px
-  padding 8px 0
-  background transparent
-  width 100%
-  border-radius (4px)
-  color white
-  text-align center
-  font-family pt-sans
-.input_black::-webkit-input-placeholder
-  color: white
-.input_black:-moz-placeholder
-  color: white
-.input_black::-moz-placeholder
-  color: white
-.input_black:-ms-input-placeholder
-  color: white
-.profit1
-  display block
-  color #405700
-  margin-top 30px
-.profit2 
-  display block
-  font-size 24px
-  color white
-  margin 20px 0
-.button_white
-  border 1px solid white
-  color white
-  width 150px
-  text-align center
-.invest_active
-  background green
-  color white !important 
-  border 1px solid green
-  border-right 1px solid black
-.invest__partner
-  font-size 24px 
-  color green
-  margin-bottom 30px
-.invest__bar
-  width 100%
-  height 3px 
-  background #d5d5d5
-  margin-bottom 20px
-  position relative
-  &:before
-    content ''
-    width 20px 
-    height @width 
-    border-radius (50%)
-    background: green
-    top -9px
-    left 25px
-    position: absolute;
-    z-index: 2;
-  &:after
-    content ''
-    width 13px 
-    height @width 
-    border-radius (50%)
-    background: #d5d5d5
-    position absolute
-    top -5px
-    right 25px
-.invest__progress
-  width 70%
-  background: green 
-  trs()
-  height 3px
-.percent__slider
-  width 87%
-  margin 0 auto
-.invest__plan
-  margin-bottom 40px
-.jsInvest
-.jsInvest2
-  height 14px
-  color white
-  width 34px
-  background: none
-  border none
-  padding 0px
-  margin 0px
-  display inline-block
-.invest__level
-  color white 
-  font-size 13px
-  margin-bottom 20px
-  span 
-    color white
-    font-size 13px
-    margin-left 4px
-.invest__buttons
-  span 
-    cursor pointer
-.invest__tab
-  overflow hidden
-#chartdiv
-  width: 100%;
-  height: 380px
-.slide__text
-  position: absolute
-  width 100%
-  left 0px
-.slide__logo2
-  sprite($sprite-logo4)
-.slide__title
-  font-size 48px 
-  color white
-.slide__text
-  p 
-    font-size 24px 
-    color white
-    span 
-      font-size 36px
-      color white
-      position relative 
-      top -5px
-.slide__text-wrapper
-  margin-top 13%
-  @media(max-width 1512px)
-    margin-top 6%
-  @media(max-width 1572px)
-    margin-top 2%
-  @media(max-width 1312px)
-    .slide__logo2
-      display none
-.slide__logo2
-  margin-left 230px
-  margin-top 20px
-// .top__titles
-//   .clip__mask
-//     font-size 15px
-//     -moz-background-clip: text;
-//     -moz-text-fill-color: transparent;
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-// .clip__mask
-//   background: linear-gradient(to right, rgba(155,211,1,1) 0%, rgba(0,155,222,1) 100%);
-.top__titles
-  sprite($sprite-logo5)
-.fb__top 
-  sprite($sprite-icon6)
-  margin-right 10px
-.tv__top 
-  sprite($sprite-icon7)
-.top__socials
-  margin-right 20px
-.mail__to
-  color green
-  margin-left 5px
-.user__nick
-  line-height 23px
-.header__top_promo
-  padding 25px 0
-  background: #f8f8f8
-.invest__h2_grey
-.invest__partner_grey
-.invest__livel_grey
-  color #444 !important
-.invest__buttons_green 
-  margin-bottom 40px
-  .button
-    border 1px solid green
-    color #444
-.chartdiv_height
-  height 450px !important
-.section__head
-  background: url(../images/slide4.jpg) no-repeat center
-  background-size cover
-  height 537px
-.section__head_bg
-  background: url(../images/slide5.jpg) no-repeat center
-.head__h2
-  font-size 48px
-  color white
-  padding 30px 0 20px 0
-.head-wrapper
-  background: green
-  height 435px
-  padding 50px 0 0 0
-.head__icons
-  position relative
-  sprite($sprite-icon8)
-  margin-left 100px
-  span
-    text-align: center
-.invest__ul_pl
-  padding-left 20px
-  padding-top 15px
-.head__title_1
-  position absolute
-  top 80px
-  left 35px
-  color white
-  font-size 14px
-.head__title_2 
-  position absolute
-  top 100px
-  right 53px
-  font-size 14px
-.head__title_3
-  bottom 75px 
-  position: absolute
-  left 115px
-  color white
-  font-size 14px
-.head__title_4
-  position: absolute
-  left 130px
-  top 125px
-  font-size 19px
-  color white
-.none_legend .amChartsLegend
-  display none
-.col__felt_white-bg
-  background: white
-.none_legend 
-  #chartdiv 
-    height 310px
-  top 0px
-.graphic-wrapper_m
-  margin-top 33px
-.descr__h2
-  font-size 36px
-  margin-bottom 20px
-.discr__img
+  line-height 34px
+.icons 
   margin-right 30px
-  .button 
-    font-size 15px
-    text-align: center
-    border-radius 0 0 4px 4px
-    border-top 1px solid white
-    line-height 24px
-    padding 5px 0
-    height 60px 
-    span 
-      font-size 14px 
-.profit__persent
-  background: url(../images/bg7.jpg)
-  padding 20px
-  margin-top 18px
+.contact__row
   margin-bottom 30px
-.stat__head_left
-  text-align left
-  margin-bottom 35px
-  margin-top 20px
-.stat__num_profit  
-  padding 20px
-.button_234
-  width 234px
-  text-align: center
-.profit2_reset
-  margin-bottom 0px
-.profit1_reset 
-  margin-top 16px
-.descr__h2_center
-  text-align: center
+.col__right_71
+  width 71%
+.road 
+  color grey 
+  font-size 25px
+  text-decoration: underline
+  display: block
+.contact__lists
+  sprite($sprite-bg)
   margin-top 30px
-.button_big 
-  font-size 19px
-  padding 0px 60px
-  height 50px
-  line-height @height
-.invest__block
-  width 260px
-  height 340px
-  position relative
-  border-radius(1px)
-  &:first-child
-    background: url(../images/bg9.png) no-repeat center
-  &:nth-child(2)
-    background: url(../images/bg10.png) no-repeat center
-  &:last-child
-    background: url(../images/bg11.png) no-repeat center
-.invest__block-span
-  font-size 24px
-  position absolute
-  bottom 35px
-  left 0px
-  width 100%
-  text-align: center
-.invest__plan-wrapper
-  padding 25px 0 40px 0
-  width 860px
-  margin 0 auto
-.charts_tini
-  width 100%
-  height 150px
-  overflow visible !important
-  div
-  svg 
-    overflow visible !important
-.charts 
-  width 100%
-  height 220px
-  overflow visible !important
-  div
-  svg 
-    overflow visible !important
-.chart__content
-  .charts_tini 
-    position relative 
-    top 25px
-.col__center_410
-  width 410px
-  text-align: center
-  position relative 
-  img 
-    padding-top 40px
-  .gr-per
-    right: 113px;
-    top: 144px;
-a[href="http://www.amcharts.com/javascript-charts/"]
-  display none !important
-#smallChart
-  position: relative
-  top 6px
-.section__header
-  background: url(../images/bg12.jpg) no-repeat center
-  background-size cover
-  height 250px
-.header__h2 
-  color white 
-  font-size 48px
-  padding 90px 0 0 0
-.logo-wrapper
-  sprite($sprite-logo2)
-  float left
-  margin 10px 40px 30px 40px
-.descr__h3
-  font-size 24px 
-  margin-bottom 30px
-.content 
-  margin-bottom 25px
-.of__span
-  font-size 24px
-  display block
-.of__small
-  font-size 14px
-  display block
-  line-height 26px
-.oficial
-  margin-top 30px
-  padding 56px 50px
-  position relative
-  background:  linear-gradient(45deg, #9bd301 0%,#009bde 100%)
-  .button_blue
-    margin-top 25px
-    padding-left 35px
-    padding-right 35px
-  &:hover 
-    .marker 
-      transform rotateY(360deg)
-      transition ease-in-out .6s
-.marker
-  sprite($sprite-icon9)
-  position absolute
-  right 80px
-  top 70px
-.col__right__article
-  background: green
-.col__left__img img 
-  display block
-.a__title
-  font-size 24px
-  color white
-  width 350px
-  text-align left
-  margin-left 70px
-.row_article
-  margin-bottom 25px
-.content_reset
-  margin 0px
-.head__h2_center 
-  padding-top 70px
-  text-align center
-.big__percent
-  text-align: center
-  span
-    color white
-.small__percent
-  text-align: center
-  .level__num 
-    font-size 24px
-  span
-    color white
-.big
-.small
-  font-size 60px
-  display block
-.level__num 
-  font-size 36px
-  display block
-.big__percent_left
-  position: absolute;
-  right: 177px;
-  bottom: 83px;
-  .big
-    position: relative;
-    right: -8px;
-    bottom: -6px;
-  .level__num
-    padding-top: 70px;
-.big__percent_right
-  position: absolute;
-  left: 177px;
-  bottom: 83px;
-  .big
-    position: relative;
-    left: -8px;
-    bottom: -6px;
-  .level__num
-    padding-top: 70px;
-.small__percent_left
-  position absolute
-  right: 89px;
-  bottom: 9px;
-  .small
-    position: relative;
-    right: -8px;
-    bottom: -6px;
-.small__percent_right
-  position absolute
-  left: 89px;
-  bottom: 9px;
-  .small
-    position: relative;
-    left: -8px;
-    bottom: -6px;
-.row_537
-  height 537px
-.deposits
-  position relative 
-  background: url(../images/bg16.jpg) no-repeat center
-  height 296px
-  width 278px
-.deposit__title
-  font-size 18px 
-  color white
-  display block 
-  text-align center
-  padding-top 35px
-.deposit__percent-big
-  position: absolute;
-  right: 44px;
-  top: 87px;
-  text-align: center;
-  .deposit__percent
-    color white 
-    font-size 39px
-    margin-top: 20px;
-.deposit__percent-small 
-  position: absolute;
-  bottom: 42px;
-  left: 57px;
-  text-align: center;
-  .deposit__percent
-    color white 
-    font-size 21px
-    margin-bottom: 10px;
-.deposit__level
-  font-size 14px
-  color white
-  display block
-.deposits_bg 
-  background: url(../images/bg17.jpg) no-repeat center
-.section__header_bg 
-  background: url(../images/bg18.jpg) no-repeat center
-.faq__help 
-  color white
-  a 
-    color green
-    decor()
-.section__header_bg
-  .header__h2
-    padding-top 70px
-    padding-bottom 15px
-.row__faq
-  border-bottom 1px solid #c6c6c6
-  padding-bottom 10px
-  margin-bottom 25px
-.faq__item.open a
-  color green
-.acord__link 
-  font-size 19px
-  &:hover 
-    color green 
-    trs()
-  &:before 
-    width 7px 
-    height @width 
-    background: green 
-    content ''
-    display inline-block
-    border-radius (50%)
-    margin-right 15px
-    position relative 
-    top -3px
-.sub__ul 
-  position: relative
-  padding-top 20px
-.acord__list
-  position relative
-  border-width 2px 
-  border-style solid
-  padding 25px 25px 5px 25px
-  border-image: linear-gradient(to right, #9bd301 , #009bde) 1 10%;
-  &:before 
-    sprite($sprite-tr)
-    content ''
-    display block
-    position absolute
-    left -2px 
-    top -21px
-    z-index 111
+.contact__lists
+  padding-top 27px
+  padding-left 50px
+  li 
+    margin 26px 0
+    &:nth-child(2)
+      position relative 
+      top 5px
   p
-    margin-bottom 20px
-.faq__item 
-  margin-bottom 20px
-.section__header_bg2
-  background: url(../images/bg20.jpg) no-repeat center
-.button_width
-  padding-left 45px
-  padding-right 45px
-.how-it-works
-  margin 50px auto 0 auto
-  position relative
-  height 467px
-  width 664px
-  span 
-    font-size 24px
-    text-align center
-    position absolute
-.it-1 
-  top 195px
-  left 125px
-  position absolute
-  width: 150px;
-.it-2 
-  top 90px 
-  right 95px
-  position absolute
-  width: 120px;
-.gear__big
-  sprite($sprite-icon10)
-  position absolute
-  left 0px
-  top 74px
-  animation rotateRight infinite 8s linear
-.gear__small
-  sprite($sprite-icon11)
+    font-size 19px
+    color #4c483e
+    font-family bold 8pt Open Sans Condensed;
+    span 
+      font-weight bold
+.col__text
+  sprite($sprite-bg2)
+.col__text_orange
+  sprite($sprite-bg3)
+.col__left_a
   position absolute
   right 0px
-  animation rotateLeft infinite 6.15s linear 
-.it-1__icon-1
-  sprite($sprite-icon12)
-  margin 0 auto 45px auto
-.it-2__icon-2
-  sprite($sprite-icon13)
-  margin 0 auto 10px auto
-.section__header_bg4
-  background: url(../images/bg23.jpg) no-repeat center
-.section__header_bg3
-  background: url(../images/bg21.jpg) no-repeat center
-.pager 
-  display flex
-  width 100%
-  align-items center
-  justify-content center
-  margin 60px 0 40px 0
-  li 
-    width 40px 
-    height @width
-    margin 3px 5px
-    border-radius 50%
-    background:  linear-gradient(45deg, #9bd301 0%,#009bde 100%)
-    &:last-child
-      margin-left 20px
-    &:first-child
-      margin-right 20px
-    &:hover 
-      a 
-        width 38px
-        height 38px
-        top 1px 
-        left 1px
-      span 
-        color green
-  a 
-    position relative
-    width 40px 
-    height @width
-    display flex
-    background: white
-    border-radius (50%)
-  span
-    margin auto
-    display inline-block
-    font-size 17px
-  .pager__active 
-    border 1px solid green
-    background green
-    span 
-      color white !important
-    a 
-      background: green
-    &:hover 
-      a 
-        top 0px 
-        left 0px 
-        width 40px 
-        height 40px
-.news__img
-  width 200px 
-  margin-right 30px
-  img 
-    display block
-    max-width 100%
-    width 100%
-    height auto
-.news__date
-  color #999
-  background: white
-  text-align: center
-  display block
-  height 45px 
-  line-height @height
-  font-size 14px
-.descr__h3_reset
-  margin-bottom 15px
-.col__right_692
-  width 692px
-.col__left_646
-  width 646px
-.col__left_news
-  width:230px;
-.content__news
-  margin-bottom 20px
-  .text 
-    line-height: 21px;
-.top__padding
-  padding-top 15px
-.of__small a 
-  color green
-.map
-  width 100%
-  iframe 
-    height 365px
-    width 100%
-.form__label 
-  display block
-.form__label_inline
-  display inline
-.form__input
-  display block
-.form__title 
-  display block
-  font-size 24px 
-  color white
-  margin-bottom 20px
-.form__area 
-  display block
-input
-textarea 
-select
-  font-family PT sans
-  border-radius(4px)
-  border 1px solid s-grey
-  padding 11px 13px
-  font-size 14px
-  width 100%
-.form__label_inline
-  display inline-block
-.contact__form
-  margin-bottom 50px
-  border-radius(5px)
-  padding 60px 40px
-  background:  linear-gradient(45deg, #9bd301 0%,#009bde 100%)
-  input
-    border 1px solid #6e9806
-    margin 6px 0 20px
-  textarea
-    border 1px solid #6e9806
-    margin 6px 0 20px
-    height 120px
-  label 
-    color white 
-    font-size 14px
-.form__input_196
-  width 196px
-  margin-right 15px !important
-.form__input_294
-  width 294px
-.col__left_409
-  width 409px
-  .of__span
-    margin-bottom 4px
-.button_input
-  border none !important
-  font-size 15px 
-  font-family PT sans
-  text-transform none
-  // padding-left 30px
-  // padding-right 30px
-  cursor: pointer
-  display: inline-block;
-  width: 200px;
-.gr-per
-  font-size 21px 
-  color white
-  position absolute
-  right 80px 
-  top 103px
-.stat__gr
+.event__link
   position relative
-.or 
-  text-transform uppercase
-  font-size 14px
-  width 100%
-  mragin-bottom 30px 
-  text-align: center
-.rules
-  color green
-  decor()
-.descr__h2_small
-  font-size 32px
-.section__dashboard
-  background url(../images/bg24.jpg) no-repeat center top, url(../images/bg1.jpg)
-.header__h2_dash
-  height 115px 
-  line-height @height 
-  padding 0px
-.col__left_240 
-  width 240px
-  margin 115px 30px 0 0
-.s-menu__item
-  background #bdbdbd
-  margin-bottom 1px
-  &:first-child.s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash1-a)
-  &:first-child 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash1)
-      &:hover:before
-        sprite($sprite-dash1-a)
-  &:nth-child(2).s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash2-a)
-  &:nth-child(2) 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash2)
-      &:hover:before
-        sprite($sprite-dash2-a)
-  &:nth-child(3).s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash3-a)
-  &:nth-child(3) 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash3)
-      &:hover:before
-        sprite($sprite-dash3-a)
-  &:nth-child(4).s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash4-a)
-  &:nth-child(4) 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash4)
-      &:hover:before
-        sprite($sprite-dash4-a)
-  &:nth-child(5).s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash5-a)
-  &:nth-child(5) 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash5)
-      &:hover:before
-        sprite($sprite-dash5-a)
-  &:nth-child(6).s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash6-1)
-  &:nth-child(6) 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash6)
-      &:hover:before
-        sprite($sprite-dash6-a)
-  &:nth-child(7).s-menu__item_active
-    .s-menu__link:before
-      sprite($sprite-dash7-a)
-  &:nth-child(7) 
-    .s-menu__link
-      &:before 
-        content ''
-        sprite($sprite-dash7)
-      &:hover:before
-        sprite($sprite-dash7-a)
-.s-menu__link
-  color white
-  padding 20px
-  display block
-  &:hover 
-    background: green
-  &:before
-    display inline-block
-    vertical-align middle
-    margin-right 20px
-.s-menu__item_active
-  .s-menu__link
-    background: green
-.chart__head
-  font-size 19px
-  color white
-  padding 28px 20px
-  background green
-  border-bottom 1px solid #81b109
-.chart__content
-  height 181px
-  background green
-  position relative 
-  img 
-    padding-top 20px 
-    display block
-  span 
-    right: 37px;
-    top: 118px;
-.sidebar
-  margin-bottom 100px
-.dash__num 
-  background: blue
-  color white
-  display block
-  height 60px 
-  line-height @height
-  margin 1px 0 1px 0
-.dash__pager
-  background: white
-.dash__sum
-.dash__quantity
-  color #777
-.dash__t
-  width 100%
-  span
-    font-size 14px
-  tr
-    background white
-    border-bottom 1px solid #ccc
-    height 61px
-  td 
-    text-align: center
-    vertical-align: middle
-    font-size 14px
-    &:last-child
-      .button
-        margin-right 10px
-  .last 
-    text-align: right
-  th 
-    padding-left 20px
-    padding-right 20px
-    background: white
-    border-right 1px solid #cccccc
-    border-bottom 1px solid #cccccc
-    vertical-align middle
-    font-size 14px
-    font-weight normal
-    height 68px
-    &:last-child 
-      border-right none
-  .left__align
-    width 300px 
-    text-align: left
-.dashboard__content
-  background: white
-.dashboard__content_empty
-  background: url(../images/dashbg.jpg) no-repeat center
-  height 749px
-.not-wrapper 
-  background: blue
-  padding 30px
-.dashboard__popup
-  height 154px
-  margin 210px auto
-  text-align: center
-  .button 
-    margin-top 15px
-  span 
-    color white
-.alert
-  sprite($sprite-dash8)
-  margin-right 13px
-.dash__download 
-  sprite($sprite-table1)
-  margin-right 10px
-  vertical-align: middle;
-.dash__print
-  sprite($sprite-table2)
-  margin-right 10px
-  vertical-align: middle;
-.dash__date1
-  display block
-  font-size 14px
-  line-height 24px
-  color #777
-.sidebar__chart
-  margin-top 20px
-.dash__date2
-  line-height 24px
-  display block
-  font-size 13px !important
-  color #999999
-.dashboard__content .pager 
-  margin 0
-  padding 20px 0
-// popup
-.form__days
-  font-size 13px
-  position: absolute
-  top 37px
-  right 10px
-  width 70px
-  text-align right
-.cancel__operation 
-  color green
-  display block
-  margin-top 15px
-  width 154px
-.apr
-  font-size 14px
-  margin-bottom 20px
-.popup__title
-  font-size 25px
-  margin-bottom 15px
-.form__label 
-  font-size 14px
-  position: relative
-.col__left_m
-  margin-right 20px
-.input_popup 
-  border 1px solid #dddddd
-  margin 5px 0 15px 0
-.apr__popup
-  width 678px
-.dashboard__popup-wrapper
-  display none
-.visible 
-  display flex
-  .dashborad__popup-container
-    display block  
-.dashborad__popup-container
-  display none
-  border-radius (5px)
-  background: white
-  padding 30px
-  margin auto
-  position: relative
-.close 
-  sprite($sprite-close)
-  cursor: pointer;
-  position: absolute
-  right 30px 
-  top 30px
-  &:hover 
-    sprite($sprite-close-hover)
-.dashboard__popup-wrapper
-  position fixed 
-  width 100%
-  height 100%
-  background rgba(0, 0, 0, 0.64);
-  top 1px
-  z-index 100
-.icon__dash
-  background green
-  height 310px 
-  width 240px
-  text-align center
-.icon__img 
-  sprite($sprite-vent)
-  display inline-block
-  margin-top 38px
-.col__right_blue
-  background: blue
-  .invest__ul_pl
-    padding-left 40px
-  .invest__ul 
-    li 
-      color #204f63
-.chart__title
-  color white
-  font-size 19px
-  margin-left 13px
-.col__center_390
-  width 390px
-  position relative 
-  span 
-    right: 109px;
-    top: 158px;
-  img 
-    padding 30px 0px 0 18px
-  .charts 
-    height 180px
-    margin-top 10px
-.transparent-bg 
-  background: transparent
-.dashboard__row
-  background: white
-  margin-bottom 20px
-  padding 25px 30px
-.profit__present_reset
-  margin-bottom 20px 
-  margin-top 20px
-.input_dashboard
-.select_dashboard
-  background: white
-  border 1px solid #dddddd
-  margin: 5px 0 15px 0;
-  &:focus 
-    border 1px solid green
-    trs()
-.pr 
-  color c-grey 
-  font-size 14px
-  width 100%
-  text-align center
-  display block
-  height 30px 
-  line-height @height
-.payment
-  position relative
-  background white
-  border-radius(5px)
+  width 80%
+  box-shadow: 0 0 8px #B9B9B9;
+  border-radius: 0 17px 17px 17px;
   overflow hidden
-  border 1px solid #e0e0e0
-  flex-wrap wrap
-  display inline-flex
-  height 80px
-  width 118px
-  margin 0 20px 20px 0
-  align-items flex-end
-  &:nth-child(5)
-    margin-right 0
-  .p-icon
-    margin 0 auto
-    display block
-    align-self auto
-.p-icon1 
-  sprite($sprite-p1)
-.p-icon2
-  sprite($sprite-p2)
-.p-icon3 
-  sprite($sprite-p3)
-.p-icon4
-  sprite($sprite-p4)
-.p-icon5 
-  sprite($sprite-p5)
-.p-icon6
-  sprite($sprite-p6)
-.p-icon7 
-  sprite($sprite-p7)
-.p-icon8
-  sprite($sprite-p8)
-.p-icon9
-  sprite($sprite-p9)
-.payments__method
-  display inline-flex
-  flex-wrap: wrap;
-.availeble
-  margin-bottom 10px
-.form__chekcbox
-  display inline-block
-  width auto 
-  margin-right 7px
-  position: relative
-  right 3px
-  top -1px
-.holy
-  position absolute
-  font-size 12px 
-  color #4e690c
-  transform rotateZ(270deg)
-  bottom 25px
-  left -20px
-.work
-  position absolute
-  font-size 12px
-  color #4e690c
-  transform rotateZ(270deg)
-  left -72px
-  top 120px
-.percent__bottom
-  position absolute
-  color #826f06
+  trs()
+  &:hover 
+    box-shadow: 0 0 18px #505050;
+    trs()
+.col__text
+  text-align: center
+  padding-left 20px
+  span
+    color white
+    display block 
+.event__title 
+  font-size 26px
+  text-decoration underline 
+  padding 36px 0 5px 0
+.event__instructor
+.event__name 
   font-size 18px
-  top: 257px;
-  left: 49px;
-  &:after
-    content '%'
-    font-family "Pt Sans"
-    font-size 9px
-    position relative
-    top -7px
-.percent__middle
-  position absolute
-  color #376477
-  font-size: 20px;
-  left: 66px;
-  top: 197px;
-  &:after
-    content '%'
-    font-family "Pt Sans"
-    font-size 11px
-    position relative 
-    top -8px
-.percent__top
-  position absolute
-  color #826f06
-  font-size 23px
-  top: 81px;
-  right: 45px;
-  &:after
-    content '%'
-    font-family "Pt Sans"
-    font-size 11px
-    position relative 
-    top -8px
-.col__right_percents
-  position relative
-.rpiv__pol
-  font-size 14px
-  margin 20px 0
+.event__prof 
+  font-size 16px
+  line-height 18px
+.news__title 
+  font-size 21px 
+  color grey
+  font-weight bold
+  margin 0 0 20px 0
   a 
-    color green
-    decor()
+    color grey
+.news__col
+  margin 25px 0 0 0 
+  padding 0 20px
+  position relative
+  p 
+    font-size 21px
+.news__actor
+  color #cc95ab
+  font-size 21px
+  text-decoration: underline
+.about__descr
+  color grey 
+  font-size 20px
+.about__icon-1
+  sprite($sprite-icon-7)
+  margin-right 15px
+.about__icon-2
+  sprite($sprite-icon-8)
+  margin-right 15px
+.about__icon-3
+  sprite($sprite-icon-9)
+  margin-right 15px
+.about__icon-4
+  sprite($sprite-icon-10)
+  margin-right 15px
+.about__icon-5
+  sprite($sprite-icon-11)
+  margin-right 15px
+.about__icon-6
+  sprite($sprite-icon-12)
+  margin-right 15px
+.about__icon-7
+  sprite($sprite-icon-13)
+  margin-right 15px
+.about__icon-8
+  sprite($sprite-icon-14)
+  margin-right 15px
+.about__row
+  margin 15px 0
+.about__icons
+  margin-top 20px
+.enrol
+  font-size 25px
+  text-transform: uppercase
+  text-decoration: underline 
+  color purple
+  display: block
+  &:before
+    content ''
+    sprite($sprite-icon-15)
+    display inline-block
+    vertical-align: middle
+    margin-right 15px
+.enrol-img
+  border-radius 33px 0 0 33px
+  margin-bottom 10px
+.icon-16
+  sprite($sprite-icon-16)
+  display block
+.icon-17
+  sprite($sprite-icon-17)
+  display block
+.icon-18
+  sprite($sprite-icon-18)
+  display block
+.icon-19
+  border-radius 50%
+  border 2px solid purple
+  padding 2px
+  height 88px 
+  width @height
+  img 
+    border-radius (50%)
+    height 80px
+    width @height
+.enrol__text
+  span 
+    display block
+    font-size 21px 
+    color grey
+    text-decoration: underline
+.col__45
+  width 45%
+.col__55
+  width 55%
+.ved 
+  text-decoration: underline
+  color grey
+  font-size 21px
+.enrol__icons
+  margin-right 20px
+.enrol__date 
+  margin-bottom 10px
+.pad 
+  margin-left 86px
+.jsTabs
+  color white 
+  font-size 14px
+  text-transform: uppercase
+  cursor pointer
+.events_reset
+  padding-bottom 0px
+.tabs 
+  position: relative;
+  top: -10px;
+  text-align: right
+.compl
+  font-size 55px
+  color grey
+.label__span
+  font-size 18px 
+  font-weight bold
+  color #7d8184
+  width 130px
+  text-align: right
+  margin-right 30px
+  vertical-align: top
+.form__input
+textarea
+select
+  border-radius (4px)
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  border none
+  padding 10px 10px
+  font-size 16px 
+  font-family 'PT Sans Narrow', sans-serif;
+.form__lable 
+  display block
+  margin-bottom 25px
+  width 100%
+.comment 
+  background: linear-gradient(to right, #fefffe 0%,#f2e9d3 99%);
+  border-radius 0 0 10px 10px
+  box-shadow 0 0 8px rgba(0,0,0, 0.3)
+  padding 40px
+  padding-left 100px
+  margin-top 35px
+.col__left_76
+  width 76%
+.form__input_80
+  width 80%
+.form__input_75 
+  width 75%
+.input__button
+  sprite($sprite-icon-19)
+  background-color transparent
+  border none
+  cursor pointer
+.label__button
+  font-size 25px 
+  color orange
+  position: relative
+  display inline-block 
+  vertical-align: middle
+  top 75px
+  &:after 
+    content 'Отправить'
+    color #f7941e
+    position absolute
+    left 8px
+    bottom -40px
+    text-transform: uppercase
+.form__area 
+  height 300px
+.col__right_24
+  width 18%
+  text-align: center
+.label__button_reset 
+  top -30px
+.ost__comment
+  font-size 25px 
+  color purple
+  text-transform uppercase
+  width 150px
+  text-align: center
+  display: block
+.icon-20
+  display: block
+  margin 0 auto 10px auto
+  sprite($sprite-icon-20)
+.comments__text
+  color grey
+  font-size 24px
+  font-style italic
+.col__left_67
+  width: 67%;
+.col__right_33
+  width 33%
+  text-align: center
+.icon-wrapper
+  width: 150px;
+  margin 0 auto
+.form__lael_33
+  width 36%
+  display: inline-block
+  margin: auto;
+  select
 select 
   appearance: none;
-  outline none
-.select_dashboard
-  background: url(../images/down.png) center right no-repeat
-.wallet__num
-  color #777
-  display block
-.grey 
-  color #777
-  padding-left 20px
-.red 
-  color #d44e4e 
-  padding-left 20px
-.green 
-  color green 
-  padding-left 20px
-.dashboard__row_green-bg
-  background: green
-  padding-bottom 10px
-  .popup__title
-    color white 
-    font-size 19px
-  .payment
-    border 1px solid green
-.dash__tabs
-  border-bottom 1px solid #ccc
-.dash__tab
-  font-size 14px 
-  cursor: pointer;
-  padding 25px
-  border-right 1px solid #ccc
-  &:last-child 
-    border-right none
-.dash__tab.active 
-  background: green 
+.sel__button
+  box-shadow 0 0 4px rgba(0,0,0, 0.3)
+  background: linear-gradient(to top, #faaa19 0%,#fcda04 99%);
+  border none
+  border-radius (5px)
+  font-size 16px
   color white
-  border-right 1px solid green
-.dash__tab-content
-  padding 20px
-  margin-bottom 20px
-.dash__tab-content-bg
-  background: url(../images/bg25.jpg) no-repeat top center
-.copy-link 
-  font-size 17px
-  margin 15px
-.your-link
-  font-size 14px
-.ref-link
-  width 390px
-  background: blue
-  text-align: center
-  padding 20px
-  span 
-    color white
-.button_border 
-  border 1px solid blue
-.promo-page
+  padding 12px 10px
+  cursor pointer
   width 280px
-  background: green
-  text-align: center
-  padding 20px
-  .button_blue
-    width 50%
-    border 1px solid blue
-    &:before 
-      content ''
-      sprite($sprite-icon14)
-      display block
-      margin 13px auto
-  .button_border 
-    width 50%
-    color white
-    &:before 
-      content ''
-      sprite($sprite-icon15)
-      display block
-      margin 13px auto
-.promo__title 
-  color white 
-  line-height 26px
-  font-size 24px
-  margin 10px 0 30px 0
-.partners__top
-  height 430px
-.partners__h2
-  font-size 36px
-  margin 30px 0
-.banner__tab
-  background: #bdbdbd
-  color #444444
-  font-size 14px
-  box-flex: 1;
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 100%;
-  border-right 1px solid white
-  text-align: center
-  padding 12px 0
-  cursor pointer
-  &:last-child 
-    border none
-.banner__tab.active 
-  background: green 
-  color white
-.banner 
-  display none
-  &:first-child
-    display block
-.banner__content
-  padding-top 40px
-  img 
-    max-width 100%
-    width 100%
-    display block
-    margin-bottom 15px
-.lt-wrapper
-  font-size 14px 
-  color #777
-  margin-bottom 5px
-.dash__tab-content-wrapper
-  display none
-  &:nth-child(2)
-    display block
-.dash__tab-content-wrapper_empty 
-  background: url(../images/bg26.jpg) green no-repeat center top
-  height 700px
-.alert__msgblock
-  display 
-.alert-popup
-  .col__right
-    text-align: left
-  .button
-    width 130px
-    text-align: center
-  .alert 
-    margin-right 20px
-.alert__msg
-  display block
-  line-height 24px
-  position: relative
-  top -4px
-.not-wrapper_padding
-  padding-left 70px 
-  padding-right 70px 
-.dashboard__popup_height
-  height 198px
-  margin-top 326px
-.dash__com
-  font-weight bold
-  color #777777
-.dash__tab
-  box-flex: 1;
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 100%;
-  border-right 1px solid #ccc
-.dash__h2
-  font-size 24px 
-  padding 25px
-.account-verifi
-  span 
-    color white
-    font-size 17px
-    padding 13px 30px
-    text-align: center
-    margin auto
-    display none
-  .col__50 
-    height 210px
-    position relative 
-    -webkit-filter: grayscale(1);
-    &:after 
-      width 100%
-      height @width
-      content ''
-      position: absolute
-      top 0px 
-      left 0px
-      display block
-      background: rgba(0,0,0, 0.7)
-  .col__50:first-child
-    background: url(../images/bg27.jpg) no-repeat center
-    span 
-      background: #d92626
-  .col__50:last-child
-    background: url(../images/bg28.jpg) no-repeat center
-    span 
-      background green
-.verified
-  .col__50:last-child
-    -webkit-filter: grayscale(0);
-    &:after
-      background: none;
-    span 
-      display block
-.not-verified
-  .col__50:first-child
-    -webkit-filter: grayscale(0);
-    &:after
-      background: none;
-    span 
-      display block
-.priv__pol_reset 
-  margin-top 5px
-.file__input
-  width 200px
-  margin-right 20px
-  margin-bottom 15px
-  opacity 0
-.form__label_file
-  color #999
-.upload-file
-  width 200px 
-  position absolute
-  border 1px solid blue
-  left 0px
-  top 0px
-  text-align: center
-  height 43px 
-  line-height @height
-  border-radius(4px)
-  cursor pointer
-.complete-file
-  font-size 14px 
-  color #777
-  display block
-  margin-bottom 7px
-.dashboard_reset
-  padding-top 0px
-.account-data
-  font-size 24px 
-  margin 20px 0 15px 0
-  display: block
-.account-form 
-  .button_green
-    margin-top 15px
-.input_payment
-  width 292px
-  display: block
-.form__label:after 
-  position absolute
-  left 320px
-  top 35px
-.payeer:after 
-  content ''
-  sprite($sprite-p2)
-.perfectmoney:after 
-  content ''
-  sprite($sprite-p1)
-.nixMoney:after
-  content ''
-  sprite($sprite-p3)
-.advcash:after 
-  content ''
-  sprite($sprite-p4)
-.okpay:after 
-  content ''
-  sprite($sprite-p5)
-.bitcoin:after
-  content ''
-  sprite($sprite-p6)
-.payza:after 
-  content ''
-  sprite($sprite-p7)
-.qiwi:after 
-  content ''
-  sprite($sprite-p8)
-  top 26px
-.yandex:after
-  content ''
-  sprite($sprite-p9)
-  top 26px
-.ip-control
-  .form__label
-    width 292px
-  .account-data
-    margin 35px 0 20px 0
-.vpn 
-  color #999
-  font-size 14px
-  line-height 25px
-  margin-top 10px
-  margin-left 20px
-.form__label_select 
-  width 459px !important
-.section-reg
-  background: url(../images/bg30.jpg) no-repeat center
-  background-size cover
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  position relative
-.section-404
-  background: url(../images/bg29.jpg) no-repeat center
-  background-size cover
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  position relative
-.e-wrapper
-  text-align: center
-  padding-top 425px
-.location
-  font-size 180px 
-  color green
-.not-found 
-  color white 
-  font-size 72px
-  display block
-  position relative 
-  top -35px
-.er-bottom
+.select-wrapper 
+  background: linear-gradient(to right, #fefffe 0%,#f2e9d3 99%);
+  padding 30px 70px
+  border-top 1px solid rgba(0,0,0, 0.1)
+  border-bottom 1px solid rgba(0,0,0, 0.1)
+  margin-left -70px
+  margin-right -70px
+  margin-top 40px
+  margin-bottom 40px
+.form__select
+  width 85%
+.form__select_100
   width 100%
-  position absolute
-  left 0px 
-  bottom 0px
-  background: rgba(0,0,0, 0.7)
-  padding 40px 0
-  text-align: center
-  .copy__ed
-    color white
-    margin-top 15px
-.col__50_reg
-  background: white
-  border-radius 4px 0 0 4px
-  padding 40px 20px 40px 40px
-.registration
-  width 697px
-  margin 50px auto 0 auto
-  input 
-    padding: 9px 13px;
-.input_invite
-  background: #f2f2f2
-  border 1px solid #f2f2f2
-  margin-bottom 30px
-.col__50_log
-  background: #f2f2f2
-  padding 40px 40px 55px 20px
-.recover-pass
-  color green
-  margin-bottom 25px
-.soc-temp 
-  display block
-.log-socials
+.form__lael_28
+  width 28%
   display inline-block
-.button_log
-  width 50%
   margin 0px
-.social-registration
-  background: blue
-  border-radius 0 0 4px 0
-  height: 342px
-.soc-buttons
-  width 187px
-  margin 0 auto
-.reg1 
-  font-size 24px 
-  color white
-  line-height: 30px;
-.reg2
-  color white
-  margin-bottom 27px
-.notification
-  position absolute
-  width 100%
-  top 0px 
-  left 0px
-  z-index 1
-.notifi
-  position relative
-  width 700px
-  margin 0 auto
-  padding 30px 0
-  .close 
-    top 12px
-    right 0px
-    sprite($sprite-cross)
-  span 
-    color white
-  p 
+.form__lael_33
+  &:nth-child(2)
+    select 
+      width 89%
+.comment__date
+  text-align: right
+  span
+    font-size 14px 
+    color grey
+  a 
+    color #d7722e
     font-size 14px
-    color white
-.notifi__msg
-  font-size 14px
-  display block
-.notifi_error 
-  background: #bb2020
-  display none
-.notifi_success 
-  background: green
-  display none
-.notifi_worning
-  background: #e2bf53
-  display none
-.notifi_information
-  background: #009bde
-  display none
-.js__visible
-  display block
-.registration_white
-  background: white
-  padding 30px 30px 40px 30px
-  border-radius 4px 4px 0 0
-  margin-top 205px
-.input_reg-login
-  display block
-  width 278px
-  margin 5px auto 15px auto
-  border 1px solid green
-.row_center-content
-  margin auto
-.login-registration
-  border-radius 0 0 4px 4px 
-  background: blue
-  width 697px
-  margin 0 auto
-  padding 30px 30px 40px 30px
-  span 
-    color white 
-    font-size 24px
+    text-decoration: underline
+    margin-left 5px
+    margin-right 10px
+.comment__name
+  font-size 24px 
+  font-weight bold
+  color #d7722e
+.comment__text
+  font-size 18px 
+  font-style italic
+  color grey
+.comment__msg
+  background: #ecdfc3
+  border 1px solid #c3b190
+  border-radius (5px)
+  padding 30px 50px
+  margin-top 5px
+  position: relative
+  &:before
+    content ''
+    position: absolute
+    sprite($sprite-bg5)
+    top -19px
+    left 15px
     display block
-    margin-bottom 20px
-  .button_reset-radius-right
-    background: transparent
-  .button 
-    border 1px solid green
-    width 140px
-.comment-slider
-  .slide
-    padding-bottom 40px
-.up
-.down 
-.up2
-.down2
-.up-down
-  display inline-block
+    z-index 11
+.align-left
+  text-align left
+.gallery
+  padding-top 15px
+.col__25
+  width 24.5%
+  margin-right 0.5%
+  margin-bottom 0.5%
+  img 
+    width 100%
+    height auto
+.gallery-wrapper
+  margin-top 10px
+.author
+  font-size 21px 
+  color purple
+  text-decoration: underline
+  margin 0px
+.page__img 
+  img 
+    width 100%
+    height auto 
+    margin-bottom 18px
+    border-radius 0 0 30px 30px
+.col__left_47
+  width 38%
+  margin-right 30px
+  .event__link
+    width 100%
+.col__text_grey
+  sprite($sprite-bg7)
+  span
+    color purple  
+    text-decoration: underline
+.article__text
+  color #38383b
+  font-size 18px
+.col__right_53
+  width 53%
   vertical-align: top
-  font-size 0
-.up
-.up2
-  a
-    sprite($sprite-up)
-    &:hover 
-      sprite($sprite-up-hover)
-.down 
-.down2
-  a
-    sprite($sprite-down2)
-    &:hover 
-      sprite($sprite-down2-hover)
-.controls 
-  text-align center
-  padding 20px 0 0 0
+.more 
+  font-size 18px
+  color purple 
+  text-decoration: underline
+  margin-top 10px
+.articles
+  .section_border 
+    padding-top 30px
+    &:first-child
+      padding-top 0px
+.compl_purple 
+  font-size 42px
+  color purple
+  display block
+  line-height 40px
+  margin-top 20px
+.compl_reset
+  line-height 50px
+  margin 20px 0 20px 0
+.orders
+  background: linear-gradient(to right, #fefffe 0%,#f2e9d3 99%);
+  border-radius 0 0 10px 10px
+  box-shadow 0 0 8px rgba(0,0,0, 0.3)
+  padding 40px 40px 70px 40px
+  width 80%
+  margin-top 20px
   span 
-    cursor pointer
-  .button
-    height: 42px;
-    line-height: 42px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    border-radius 0px
-.button_rev
-  margin 25px 0 10px 0
-.double-slider
-  overflow hidden
-  height 330px
-.textarea_popup
-  margin 5px 0 20px 0
-  height 84px 
-  border 1px solid #ccc
-.input_disabled
-  background: #c6c6c6 !important
-  border 1px solid #c6c6c6 !important
-  color #888686
-.input_error
-  border 1px solid #f07676 !important
-  color #f07676
-.input_success 
-  border 1px solid green !important
-  color green
-.button_disabled
-  background: #c6c6c6 !important
-// Preloader
-.loader-wrapper
-  width: 100%;
-  height: 100%;
-  position:fixed;
-  z-index: 111;
-  top: 0px;
-  left: 0px;
-.loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -15px 0 0 -175px;
-  transform: scale(0.75);
-  z-index 112
-}
-.loader:hover {
-    cursor: wait;
-}
-.loader .dot {
-  z-index: 3;
-  position: relative;
-  float: left;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  content: '';
-  background: #fff;
-  color: blue;
-  font: lighter 20px/50px "Pt Sans"
-  opacity: 0;
-  animation: loader 5s infinite linear;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid lightseagreen;
-}
-.loader .dot:nth-of-type(1) {
-  -webkit-animation-delay: 0.15s;
-  -moz-animation-delay: 0.15s;
-  -o-animation-delay: 0.15s;
-  -ms-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-}
-.loader .dot:nth-of-type(2) {
-  animation-delay: 0.3s;
-}
-.loader .dot:nth-of-type(3) {
-  animation-delay: 0.45s;
-}
-.loader .dot:nth-of-type(4) {
-  animation-delay: 0.6s;
-}
-.loader .dot:nth-of-type(5) {
-  animation-delay: 0.75s;
-}
-.loader .dot:nth-of-type(6) {
-  animation-delay: 0.9s;
-}
-.loader .dot:nth-of-type(7) {
-  animation-delay: 1.05s;
-}
-.loader .cogs {
-  transform: scale(0.8);
-}
-.loader .cogs .cog {
-  animation: rotate1 2s infinite;
-  animation-timing-function: linear;
-  background: green;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 40px;
-  left: 125px;
-}
-.loader .cogs .cog.cog0 {
-  animation: rotate2 2s infinite;
-  animation-timing-function: linear;
-  transform: rotate(22.5deg);
-  top: -41px;
-  left: 206px;
-}
-.loader .cogs .cog.cog1 {
-  animation: rotate2 2s infinite;
-  animation-timing-function: linear;
-  transform: rotate(22.5deg);
-  top: -41px;
-  left: 44px;
-}
-.loader .cogs .cog:after {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background: #fff;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  z-index: 2;
-}
-.loader .cogs .cog .bar {
-  position: absolute;
-  top: -15%;
-  bottom: -15%;
-  left: 39%;
-  right: 39%;
-  background: green;
-}
-.loader .cogs .cog .bar:nth-of-type(2) {
-  transform: rotate(45deg);
-}
-.loader .cogs .cog .bar:nth-of-type(3) {
-  transform: rotate(90deg);
-}
-.loader .cogs .cog .bar:nth-of-type(4) {
-  transform: rotate(-45deg);
-}
-.loader-wrapper .loader-section {
-  position: fixed;
-  top: 0;
-  width: 51%;
-  height: 100%;
-  background: white;
-  z-index: 111;
-}
-.loader-wrapper .loader-section.section-left {
-  left: 0;
-}
-.loader-wrapper .loader-section.section-right {
-  right: 0;
-}
-.loaded .loader-wrapper .loader-section.section-left {
-  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(-100%);  /* IE 9 */
-  transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
-}
-.loaded .loader {
-  opacity: 0;
-}
-.loaded .loader-wrapper {
-  visibility: hidden;
-}
-.loaded .loader {
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-.loaded .loader-wrapper .loader-section.section-right,
-.loaded .loader-wrapper .loader-section.section-left {
-  transition: all 0.3s 0.3s ease-out;
-}
-.loaded .loader-wrapper .loader-section.section-right {
-  -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(100%);  /* IE 9 */
-  transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
-}
-.loaded .loader-wrapper {
-  transform: translateY(-100%);
-  transition: all 0.3s 0.6s ease-out;
-}
-@-moz-keyframes loader {
-  0% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;  
-  }
-  30% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  40% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  70% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;  
-  }
-}
-@-webkit-keyframes loader {
-  0% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;  
-  }
-  30% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  40% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  70% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;  
-  }
-}
-@-o-keyframes loader {
-  0% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;   
-  }
-  30% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  40% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  70% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;   
-  }
-}
-@keyframes loader {
-  0% {
-    transform: scale(0.5, 0.5);
-    opacity: 0; 
-  }
-  30% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  40% {
-    transform: scale(0.9, 0.9);
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-  70% {
-    transform: scale(0.5, 0.5);
-    opacity: 0;
-  }
-}
-@-moz-keyframes rotate1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@-webkit-keyframes rotate1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@-o-keyframes rotate1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@keyframes rotate1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@-moz-keyframes rotate2 {
-  0% {
-    transform: rotate(202.5deg);
-  }
-  100% {
-    transform: rotate(22.5deg);
-  }
-}
-@-webkit-keyframes rotate2 {
-  0% {
-    transform: rotate(202.5deg);
-  }
-  100% {
-    transform: rotate(22.5deg);
-  }
-}
-@-o-keyframes rotate2 {
-  0% {
-    transform: rotate(202.5deg);
-  }
-  100% {
-    transform: rotate(22.5deg);
-  }
-}
-@keyframes rotate2 {
-  0% {
-    transform: rotate(202.5deg);
-  }
-  100% {
-    transform: rotate(22.5deg);
-  }
-}
-@keyframes rotateRight
-  from 
-    transform rotateZ(0deg)
-  to
-    transform rotateZ(360deg)
-@keyframes rotateLeft
-  from 
-    transform rotateZ(0deg)
-  to
-    transform rotateZ(-360deg)
+    color grey
+    font-size 21px  
+    display block
+.order__n 
+  margin 0 0 20px 0
+  .col__left
+    span
+      width 60px
+      border 2px solid white
+      box-shadow 0 0 0 2px #f7941e
+      height @width 
+      line-height @width 
+      color white
+      text-align: center
+      font-size 40px
+      background #f7941e
+      display inline-block
+      border-radius (50%)
+      margin-right 10px
+.instruktor__img
+  width 100%
+  height auto 
+  border-radius 25px 0 0 25px
+.col__left_30
+  width 30%
+.col__right_70
+  width 70%
+  padding-left 30px
+  vertical-align: top
+.instruktor
+  padding 0 20px
+.instruktor-cours
+  padding 50px 20px 0 20px
+  .col__left_30
+    width 45%
+  .col__right_70
+    width 55%
+.power
+  font-size 21px 
+  color grey
+  text-decoration: underline
+  margin-left 20px
+  margin-bottom 20px
+.cours 
+  margin-bottom 20px

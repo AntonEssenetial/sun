@@ -1,71 +1,75 @@
 *
   box-sizing border-box
 // Functions 
-decor()
-  text-decoration underline
-  &:hover 
-    text-decoration none
 trs()
   transition ease-in-out .2s
 // Colors
-grey = #f8f8f8
-g-border = #e7e6eb
-green = #8ac200
-link = #333333
-s-grey = #777777
-blue = #009bde
-lime = #b4ffa3
-briz = #a4e4ff
+orange = #f1592a
+purple = #c664a7
+grey = #746f72
 // Fonts
 pt-sans = 'PT Sans', sans-serif;
-// Buttons
-button 
-  border none 
-  vertical-align middle
-  cursor pointer 
-  border none
-  outline none
-  background transparent
-menu 
-  padding 0px
-  margin 0px
+// Static
+.b-ib 
+  display inline-block
+.b-ib-wrapper
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 0;
+.b-ib
+  display: inline-block;
+  vertical-align: middle;
 span 
   display inline-block
-  vertical-align middle
-  font-size 15px
-  color link
-a 
+a
+  display inline-block
   text-decoration none
-  color link
-  display inline-block
-h1, h2, h3, h4, h5, h6 
-  color #444444
+a > img 
+  display bolck
+.align__right
+  text-align right
+h1, h2, h3, h4, h5
   font-weight normal
-.text 
-  font-size 14px
-  line-height 19px
-.button_green
-  background green
-  color white
-  &:hover 
-    trs()
-    background: #6F9C00
-.button_blue 
-  background blue 
-  color white
-  &:hover 
-    trs()
-    background #0083BB;
+shadow()
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.72);
 .button
-  height 40px 
-  line-height @height
-  padding 0 16px
-  display inline-block
-  border-radius (4px)
-.cert__h2
-  font-size 24px 
-  color white
-  margin 10px 0 25px 0
-.about__cert
-  background: green
-  padding 20px 30px 30px 30px
+  font-size 13px 
+  text-transform: uppercase
+  color purple
+  margin-right 30px
+  span 
+    vertical-align: middle
+.radial
+  border 3px solid purple
+  border-radius (50%)
+  width 90px
+  height @width
+  text-align center
+  color purple
+  margin-right 20px
+  span 
+    display block
+    line-height 20px
+.radial__date
+  font-size 30px
+  margin-top 15px
+.radial__month
+  font-size 15px
+.radial__day
+  font-size 16px
+  font-weight bold
+  text-transform: uppercase
+.content__day
+  margin-bottom 15px
+.text_grey
+  color grey
+.text 
+  font-size 16px
+.content__date
+  color purple
+  font-size 16px
+.col__link a 
+  display block
+.news 
+  padding-top 10px

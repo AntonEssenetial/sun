@@ -1,0 +1,40 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 Отзывы
+      .row.events-wrapper.b-ib-wrapper
+        .events
+          .row
+            .col__left.b-ib.col__left_67
+              p.comments__text Дорогие друзья! За окном пока снежно, а мы хотим порадовать вас солнечными весенними новостями! 1 мая нашему тренинг-центру исполняется 3 года! мы растем, развиваемся и расширяем свои возможности!
+            .col__right.b-ib.col__right_33
+              .icon-wrapper
+                .icon-20
+                a(href="").ost__comment Оставить свой отзыв
+          .row.select-wrapper 
+            form
+              label(for="").form__lable.form__lael_28
+                input(type="button", value="Показать все").sel__button
+              label(for="").form__lable.form__lael_33
+                select.form__select.form__select_100
+                  option(value="Выберете тренера") Выберете тренера
+                  option(value="что то там 1") что то там 1
+                  option(value="что то там 5") что то там 5
+              label(for="").form__lable.form__lael_33
+                select.form__select.form__select_100
+                  option(value="Выберете мероприятие") Выберете мероприятие
+                  option(value="что то там 2") что то там 2
+                  option(value="что то там 3") что то там 3
+          .row.comment__area
+            span.comment__name Эля
+            .comment__date
+              span Мероприятия:
+              a(href="") Регулярная йога
+              span Тренер:
+              a(href="") Дарнара
+            .comment__msg
+              p.comment__text Дорогие друзья! За окном пока снежно, а мы хотим порадовать вас солнечными весенними новостями! 1 мая нашему тренинг-центру исполняется 3 года! мы растем, развиваемся и расширяем свои возможности! 
+    include footer.jade

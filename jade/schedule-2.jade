@@ -1,0 +1,57 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 Рассписание
+      .row.section__controls
+        a(href="").button.button_cal 
+          span Календарь <br> событий
+        a(href="").button.button_next 
+          span Следующая <br> неделя
+      .row.content-wrapper
+        .content.section_borders
+          .content__day
+            .col__left.b-ib
+              .radial
+                span.radial__date 25
+                span.radial__month сентября
+                span.radial__day пн
+            .col__right.b-ib
+              .col__link
+                a(href="").content__date 8:00-17:00
+                a(href="").text.text_grey Рисовать умеют все! Интуитивный тренинг от Юлии Перумовой
+          .content__day
+            .col__left.b-ib
+              .radial
+                span.radial__date 25
+                span.radial__month сентября
+                span.radial__day пн
+            .col__right.b-ib
+              .col__link
+                a(href="").content__date 8:00-17:00
+                a(href="").text.text_grey Рисовать умеют все! Интуитивный тренинг от Юлии Перумовой
+          .content__day
+            .col__left.b-ib
+              .radial
+                span.radial__date 25
+                span.radial__month сентября
+                span.radial__day пн
+            .col__right.b-ib
+              .col__link
+                a(href="").content__date 8:00-17:00
+                a(href="").text.text_grey Рисовать умеют все! Интуитивный тренинг от Юлии Перумовой
+          .content__day
+            .col__left.b-ib
+              .radial
+            .col__right.b-ib
+          .content__day
+            .col__left.b-ib
+              .radial
+            .col__right.b-ib
+          .content__day
+            .col__left.b-ib
+              .radial
+            .col__right.b-ib
+    include footer.jade

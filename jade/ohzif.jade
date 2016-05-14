@@ -1,0 +1,36 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 Оставить отзыв
+      .row.events-wrapper.b-ib-wrapper
+        .comment
+          .form
+            form(action="")
+              label(for="").form__lable
+                span.label__span Мероприятие
+                input(type="text").form__input.form__input_80
+              label(for="").form__lable
+                span.label__span Дата
+                input(type="text").form__input.form__input_80
+              .row 
+                .col__left.col__left_76.b-ib
+                  label(for="").form__lable
+                    span.label__span Фио
+                    input(type="text").form__input.form__input_75
+                  label(for="").form__lable
+                    span.label__span Ваш телефон
+                    input(type="text").form__input.form__input_75
+                  label(for="").form__lable
+                    span.label__span Электронная почта
+                    input(type="text").form__input.form__input_75
+                  label(for="").form__lable
+                    span.label__span Ваш отзыв
+                    textarea.form__input_75.form__area
+                .col__right.b-ib.col__right_24
+                  label(for="").label__button
+                    input(type="button").input__button
+
+    include footer.jade

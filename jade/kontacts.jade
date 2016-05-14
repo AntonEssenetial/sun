@@ -1,0 +1,45 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 Контаткты
+      .row.contacts.b-ib-wrapper
+        .col__left.col__50.b-ib.va-top
+          span.contact__title Контактная информация
+          span.contact__phones.contact__phones_top Вы можете позвонить нам по телефонам
+          .row.contact__row
+            .col__left.b-ib
+              span.phone__icon.icons
+            .col__right.b-ib
+              a(href="tel:+79254464300").contact__link +7 925 446 43 00 Юлия
+              a(href="tel:+79037657949").contact__link +7 903 765 79 49 Лана
+              a(href="tel:+79099441818").contact__link +7 909 944 18 18 Татьяна
+          .row.contact__row
+            .col__left.b-ib
+              span.env__icon.icons
+            .col__right.b-ib
+              span.contact__phones Или написать на почту
+              a(href="mailto:info@sunme.ru").contact__link info@sunme.ru
+          .row.contact__row
+            .col__left.b-ib
+              span.home__icon.icons
+            .col__right.b-ib.col__right_71
+              span.contact__phones г. Москва, ул. Остоженка д. 7, стр. 1
+              span.contact__phones (метро Кропоткинская)
+              a(href="#").road Схема проезда
+        .col__right.col__50.b-ib.va-top
+          span.contact__title Оплатить мероприятия можно <br>следующими способами
+          .row
+            .col__center
+              ul.contact__lists
+                li
+                  p Переводом на карту Сбербанка <span>4276 3800 1671 3856</span>
+                li
+                  p Visa Qiwi Wallet, на номер <span>+7 903 765 79 49</span>
+                  p (оплата через сайт https://qiwi.com или терминалы Qiwi)
+                li
+                  p Яндекс.Деньги.Кошелёк номер <span>4100 1197 2805 897</span>
+                  p (https://money.yandex.ru)
+    include footer.jade

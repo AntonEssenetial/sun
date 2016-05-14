@@ -1,0 +1,31 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 Мероприятия
+      .row.events-wrapper.b-ib-wrapper
+        .section_border
+          .events
+            .col__events.col__50.b-ib
+              a(href="").event__link
+                .col__left.b-ib
+                  .col__img
+                    img(src="images/bg3.png", alt="")
+                .col__right.b-ib.col__left_a
+                  .col__text
+                    span.event__title Хатха-Йога
+                    span.event__instructor Ведущий: 
+                    span.event__name Татьяна Карпова
+            .col__events.col__50.b-ib
+              a(href="").event__link
+                .col__left.b-ib
+                  .col__img
+                    img(src="images/bg3.png", alt="")
+                .col__right.b-ib.col__left_a
+                  .col__text
+                    span.event__title Хатха-Йога
+                    span.event__instructor Ведущий: 
+                    span.event__name Татьяна Карпова
+    include footer.jade

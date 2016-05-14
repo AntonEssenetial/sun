@@ -1,0 +1,29 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 ЗАПИСЬ НА МЕРОПРИЯТИЕ
+      .row.events-wrapper.b-ib-wrapper
+        .section_border
+          .events
+            span.compl.compl_reset Заявка на участие в мероприятии <br> успешно отправлена!
+            span.compl_purple Оплатить мероприятия можно <br> следующими способами
+            .orders
+              .order__n
+                .col__left.b-ib
+                  span 1
+                .col__right.b-ib
+                  span Переводом на карту Сбербанка 4276 3800 1671 3856
+              .order__n  
+                .col__left.b-ib
+                  span 2
+                .col__right.b-ib
+                  span Visa Qiwi Wallet, на номер +7 903 765-79-49 <br> (оплата через сайт https://qiwi.com или терминалы Qiwi)
+              .order__n  
+                .col__left.b-ib
+                  span 3
+                .col__right.b-ib
+                  span Яндекс.Деньги. Кошелек номер 4100 1197 2805 897 (https://money.yandex.ru)
+    include footer.jade

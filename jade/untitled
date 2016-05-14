@@ -1,0 +1,15 @@
+include head.jade
+body
+  .b-wrapper
+    include header.jade
+    section.section__content
+      .row.section__title
+        h2.title__h2 О нас
+      .row.events-wrapper.b-ib-wrapper
+        .section_border
+          .events
+            .contact__title Солнце Внутри - центр энергетических и творческих практик!  Клуб, где мы:
+            .row
+              .col__left.col__50
+              .col__right.col__50
+    include footer.jade

@@ -1,6 +1,33 @@
 include head.jade
 body
   .b-wrapper
-    header
-      include menu.jade
+    include header.jade
+    section
+      .row.section__title
+        h2.title__h2 Главная
+      .slider-wrapper
+        .slider
+          slide
+            a(href="")
+              img(src="images/slide.jpg", alt="")
+          slide
+            a(href="")
+              img(src="images/slide2.jpg", alt="")
+    section.section__video
+      .row.b-ib-wrapper
+        .section__col.b-ib
+          a(href="").video__link
+            span.video__element Расписание
+            img(src="images/video1.jpg", alt="")
+        .section__col.b-ib
+          a(href="").video__link
+            span.video__element Отзывы
+            img(src="images/video2.jpg", alt="")
+        .section__col.b-ib
+          a(href="").video__link
+            span.video__element Контаткы
+            img(src="images/video3.jpg", alt="")
+    section.section__delivery
+      .row
+        a(href="").delivery Подписаться на рассылку
     include footer.jade
