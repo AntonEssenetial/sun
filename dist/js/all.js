@@ -8,4 +8,8 @@ $(document).ready(function() {
     pause: 7000,
     mode: 'fade'
   });
+  $('.sandwitch').click(function(event) {
+    $(this).toggleClass('active')
+    $('.menu').toggleClass('active animated fadeIn')
+  });
 });

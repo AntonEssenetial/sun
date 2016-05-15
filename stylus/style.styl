@@ -38,7 +38,9 @@ header
     color white 
     font-size 24px
 .header__logo
-  sprite($sprite-logo)
+  img 
+    width 100%
+    height auto
 .header__title
   color orange
   font-size 24px
@@ -400,6 +402,10 @@ section
     text-decoration: underline
 .col__45
   width 45%
+  padding-right 30px
+  img 
+    width 100%
+    height auto
 .col__55
   width 55%
 .ved 
@@ -592,6 +598,9 @@ select
   img 
     width 100%
     height auto
+    display block
+  a 
+    display block
 .gallery-wrapper
   margin-top 10px
 .author
@@ -693,3 +702,264 @@ select
   margin-bottom 20px
 .cours 
   margin-bottom 20px
+.header__col_44
+  width 44%
+.header__col_25
+  width 25%
+.sandwitch
+  width 28px
+  height 28px
+  top 8px
+  bottom 0
+  left 0
+  right 0
+  margin auto
+  z-index 200
+  > span
+    width 28px
+    height 3px
+    background white
+    border none
+    border-radius 4px
+    display block
+    position relative
+.sw-topper
+  top 5px
+  transition: transform 0.5s, top 0.2s
+  display block 
+.sw-bottom 
+  top: 10px
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s 
+.sw-footer 
+  top: 15px
+  transition: all 0.5s
+  transition-delay: 0.1s 
+.sandwitch.active .sw-topper 
+  background white
+  top: 13px
+  transform: rotate(-45deg) 
+.sandwitch.active .sw-bottom 
+  background white
+  top: 10px
+  transform: rotate(45deg) 
+.sandwitch.active .sw-footer 
+  background white
+  opacity: 0
+  top: 0
+  transform: rotate(180deg)
+// media query
+@media(max-width 1274px)
+  .b-wrapper 
+    width 100%
+  .section__col
+    width 33%
+    img 
+      width 100%
+      height auto
+@media(max-width 1209px)
+  .col__45
+  .col__55
+    display block
+    width 100%
+    margin-bottom 20px
+    padding 0px
+@media(max-width 1191px)
+  .about__icons .col__50
+    display block
+    width 100%
+@media(max-width 1189px)
+  .header__col_25
+    width 28%
+@media(max-width 1085px)
+  .form__input_80
+  .form__input_75
+    width 100%
+  .label__span
+    width 100%
+    margin-right 4%
+    margin-bottom 20px
+  .col__right_24
+    width 100%
+    display block
+  .label__button_reset
+  .label__button
+    top 0px 
+    margin 20px 0
+  .col__left_76
+    width 100%
+    display block
+  .comment
+    padding 30px
+    .label__span
+      display: block
+      text-align: center
+@media(max-width 1055px)
+  .order__n
+    text-align: center
+    .col__left
+      display block
+      margin-bottom 20px
+  .contacts > .col__50
+    display block
+    width 100%
+  .sel__button
+    width 83%
+@media(max-width 1000px)  
+  .menu__item
+    display block 
+    background: orange !important
+    border-bottom 1px solid white
+  menu 
+    margin-left: -20px;
+    margin-right: -20px;
+  .menu
+    position absolute
+    z-index 1
+    display none
+    width 100%
+    li:hover 
+      background: #E43D09 !important;
+  .menu.active 
+    display block
+  .toggle-menu
+    display block
+    border none
+    background: orange
+  .header__col
+    display block
+    width 100%
+    text-align: center
+    padding 0 20px
+@media(max-width 990px)
+  .col__25 
+    width 49.5%
+  .col__events
+    width 360px
+    margin 0 auto 20px auto
+    display block
+  .event__link
+    width 100%
+  .section__col 
+    display block
+    margin 0 auto 20px auto
+    width 300px
+@media(max-width 766px)
+  .orders
+    width 100%
+  .compl_purple
+    font-size 30px 
+    text-align: center
+  .col__right_70
+    width 100% 
+    display block
+    padding 0px
+    p
+      font-size 20px
+  .col__left_30
+    display block
+    width 100%
+    img
+      border-radius (50px)
+      margin-bottom 20px
+  .instruktor-cours
+    .col__right_70
+    .col__left_30 
+      width 100%
+      display block
+      padding 0px
+  .col__left_30
+    width 100%
+    display block
+  .compl
+    font-size 46px 
+    display: block
+    text-align: center
+  .event__title
+    font-size 21px
+  .enrol
+  .enrol__date
+    text-align: center
+  .enrol__icons
+    margin 0px auto 20px auto !important
+    display block 
+    width 86px
+  .col__left_47
+    width 300px 
+    margin 0 auto 20px auto
+    display block
+  .col__right_53
+    display block
+    width 100%
+  .form__lael_28
+    .sel__button
+      width 100%
+  .form__lael_28
+  .form__lael_33
+    display block
+    width 100%
+    margin-bottom 20px
+    input 
+    select
+      width 100% !important
+@media(max-width 693px)
+  .select-wrapper
+    margin-left -10px
+    margin-right -10px
+    padding-left 10px
+    padding-right 10px
+  .contact__title
+    text-align: center
+    font-size 25px
+  .events
+    padding 0px
+  .title__h2
+    font-size: 28px;
+    margin 0px 
+    text-align: center
+  .events-wrapper
+    padding 30px 10px
+  .col__text
+    width 184px
+  .about__row
+    text-align: center
+    span 
+      display: block
+      margin 0 auto
+@media(max-width 594px)
+  .content__day
+    text-align: center
+    .radial 
+      margin 0 auto 20px auto
+  .col__left_67
+  .col__right_33
+    width 100%
+    display block
+    margin-bottom 20px
+  .header__logo
+    margin-bottom 15px
+  .contacts
+    text-align: center
+    padding 10px
+  .contact__lists
+    width 100%
+    background: none
+    padding 0px
+  .contact__row .col__left
+    display block
+    margin 0 auto
+    text-align: center
+    .icons
+      margin 0 auto
+@media(max-width 413px)
+  .section__video
+    padding-left 0px
+    padding-right 0px
+  .section__col
+    width 320px
+  .event__link
+    width 100%
+  .col__events
+    width 100%
+  .col__25
+    width 100%
